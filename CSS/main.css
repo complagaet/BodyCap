@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto-Regular", "Arial", sans-serif;
+    color: #1a1a1a
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../TTF/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../TTF/Roboto-Bold.ttf");
+}
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #f9f8ff;
+}
+header {
+    width: calc(100% - 40px);
+    max-width: 1480px;
+    padding: 15px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    top: 20px;
+    border-radius: 25px;
+    background-color: #ffffff36;
+    backdrop-filter: blur(15px);
+}
+#navHeader {
+    display: flex;
+    align-items: center;
+}
+section {
+    width: calc(100% - 40px);
+    max-width: 1480px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+.sectionFullscreen {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    justify-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #5685ff;
+    border-radius: 0;
+}
+#welcomeScreen {
+    background-image: url("../SVG/welcomeScreen.svg");
+    background-size: cover;
+    background-position: center;
+}
+#starScreen {
+    background-image: url("../SVG/starScreen.svg");
+    background-size: cover;
+    background-position: center;
+}
+#goldScreen {
+    background-image: url("../SVG/goldScreen.svg");
+    background-size: cover;
+    background-position: center;
+}
+h1 {
+    font-family: "Roboto-Bold", "Arial", sans-serif;
+    font-weight: normal;
+}
+.h1Ultra {
+    color: #ffffff;
+    font-size: 80px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    gap: 40px
+}
+a {
+    font-size: 20px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+footer {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+}
+ul {
+    list-style-type:  none;
+}
+img {
+    border-radius: 18px;
+}
+input, button, textarea, select {
+    min-height: 45px;
+    border-radius: 25px;
+    padding: 8px;
+    font-size: 20px;
+    border: none;
+    background-color: #e5e5e5;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px
+}

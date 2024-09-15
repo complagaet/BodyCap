@@ -1,110 +1,27 @@
 <!DOCTYPE html>
 <html lang="en" style="padding: 0">
     <head>
+        <link href="CSS/main.css" rel="stylesheet" type="text/css">
         <meta charset="UTF-8">
         <title>BodyCap</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                font-family: 'Arial', sans-serif;
-                color: #1a1a1a
-            }
-            body {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-                background-color: #ffffff;
-            }
-            header {
-                width: 100%;
-                padding: 15px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-                background-color: #ffffff;
-            }
-            nav {
-                display: flex;
-                gap: 40px
-            }
-            a {
-                font-size: 20px;
-            }
-            main {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                max-width: 1080px;
-                width: 100%;
-                padding: 0 20px;
-            }
-            section {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-                padding: 20px;
-                background-color: #ffffff;
-                border-radius: 25px;
-            }
-            footer {
-                width: 100%;
-                padding: 15px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-                background-color: #ffffff;
-                position: fixed;
-                bottom: 0;
-            }
-            ul {
-                list-style-type:  none;
-            }
-            img {
-                border-radius: 18px;
-            }
-            input, button, textarea {
-                min-height: 45px;
-                border-radius: 25px;
-                padding: 8px;
-                font-size: 20px;
-                border: none;
-                background-color: #e5e5e5;
-            }
-            form {
-                display: flex;
-                flex-direction: column;
-                width: 300px;
-                gap: 10px
-            }
-        </style>
     </head>
     <body>
         <header>
-            <h1 style="font-size: 40px">BodyCap</h1>
-            <nav>
+            <nav id="navHeader">
                 <a href="index.html">Home</a>
                 <a href="swimming.html">Swimming</a>
                 <a href="running.html">Running</a>
+                <h1 style="font-size: 40px">BodyCap</h1>
                 <a href="bicycling.html">Bicycling</a>
                 <a href="climbing.html">Climbing</a>
                 <a href="tracker.html">Tracker</a>
             </nav>
         </header>
-        <main style="height: 100%; padding: 200px 0">
-            <section>
-                <br>
-                <p style="font-size: 20px; align-self: center">
-                    The <span style="color: #ff00d0; font-weight: bold; font-size: 60px">Tracker</span> is<br>
-                    <span style="color: #ff003b; font-weight: bold; font-size: 60px">Not</span> ready yet!<br>
-                    ... <span style="color: #2159ff; font-weight: bold; font-size: 30px; font-style: italic">Sorry</span> !</p>
-                <br>
+        <main>
+            <section class="sectionFullscreen" id="goldScreen">
+                <h1>The</h1>
+                <h1 class="h1Ultra">Tracker</h1>
+                <h1>is not ready yet!</h1>
             </section>
         </main>
         <footer>
