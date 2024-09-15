@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" style="padding: 0">
+    <head>
+        <meta charset="UTF-8">
+        <title>BodyCap</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+                color: #1a1a1a
+            }
+            body {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                background-color: #ecdec5;
+            }
+            header {
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                background-color: #ffffff;
+            }
+            nav {
+                display: flex;
+                gap: 40px
+            }
+            a {
+                font-size: 20px;
+            }
+            main {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 1080px;
+                width: 100%;
+                padding: 0 20px;
+            }
+            section {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 25px;
+            }
+            footer {
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                background-color: #ffffff;
+            }
+            img {
+                border-radius: 18px;
+            }
+            input {
+                min-height: 45px;
+                border-radius: 45px;
+                padding: 8px;
+                font-size: 20px;
+                border: none;
+                background-color: #e5e5e5;
+            }
+            ul {
+                list-style-type:  none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 style="font-size: 40px">BodyCap</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="swimming.html">Swimming</a>
+                <a href="running.html">Running</a>
+                <a href="bicycling.html">Bicycling</a>
+                <a href="climbing.html">Climbing</a>
+                <a href="tracker.html">Tracker</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <img src="https://i.pinimg.com/originals/72/65/89/726589510bb797bc5943c09b561449d7.png" width="100%" alt="Climbing">
+                <h1 style="font-size: 40px; align-self: center">Learn more about rock climbing!</h1>
+                <br>
+                <p style="font-size: 20px; align-self: center">Rock climbing improves strength, flexibility, and endurance by engaging multiple muscle groups.
+                    It enhances balance, coordination, and mental focus while providing a full-body workout. 
+                    Additionally, it promotes problem-solving skills and reduces stress. 
+                    Regular running promotes overall fitness and longevity.
+                </p>
+                <br>
+            </section>
+            <section>
+                <h1 style="align-self: center; font-weight: normal">BodyCap &mdash; the best way to track Your Body.</h1>
+            </section>
+            <section>
+                <h1 style="font-size: 40px; align-self: center">Find out your daily progress!</h1>
+                <br>
+                <p style="font-size: 20px; align-self: center">Please enter how much you did rock climbing today!</p>
+                <input type="number" name="weight" placeholder="I've done rock climbing for: ..." style="width: 30%; height: 30%; align-self:center">
+                <br>
+            </section>
+        </main>
+        <footer>
+            <p style="font-weight: bold">SE-2331</p>
+            <ul>
+                <li>Pavel Lukoyanov</li>
+                <li>Maksat Sagyndyk</li>
+                <li>Amir Kairov</li>
+            </ul>
+        </footer>
+    </body>
+</html>

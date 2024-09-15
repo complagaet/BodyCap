@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" style="padding: 0">
+    <head>
+        <meta charset="UTF-8">
+        <title>BodyCap</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+                color: #1a1a1a
+            }
+            body {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                background-color: #ecdec5;
+            }
+            header {
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                background-color: #ffffff;
+            }
+            nav {
+                display: flex;
+                gap: 40px
+            }
+            a {
+                font-size: 20px;
+            }
+            main {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 1080px;
+                width: 100%;
+                padding: 0 20px;
+            }
+            section {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 25px;
+            }
+            footer {
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                background-color: #ffffff;
+            }
+            ul {
+                list-style-type:  none;
+            }
+            img {
+                border-radius: 18px;
+            }
+            input, button, textarea, select {
+                min-height: 45px;
+                border-radius: 25px;
+                padding: 8px;
+                font-size: 20px;
+                border: none;
+                background-color: #e5e5e5;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+                gap: 10px
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 style="font-size: 40px">BodyCap</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="swimming.html">Swimming</a>
+                <a href="running.html">Running</a>
+                <a href="bicycling.html">Bicycling</a>
+                <a href="climbing.html">Climbing</a>
+                <a href="tracker.html">Tracker</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h1 style="font-size: 40px">Welcome to BodyCap!</h1>
+                <br>
+                <p style="font-size: 20px; align-self: center">Learn about a <span style="color: #09c809; font-weight: bold; font-size: 60px">healthy lifestyle</span>,<br>
+                    use <span style="color: #ff00d0; font-weight: bold; font-size: 60px">Tracker</span><br>
+                    and get <span style="color: #1a7eff; font-weight: bold; font-size: 60px">Forecasts</span> about your health</p>
+                <br>
+            </section>
+            <section>
+                <h1 style="align-self: center; font-weight: normal">BodyCap &dash; the best way to track Your Body.</h1>
+            </section>
+            <section>
+                <h1 style="font-size: 40px">Tracker!</h1>
+                <br>
+                <p style="font-size: 20px; align-self: center">Try <a href="tracker.html"><span style="color: #ff00d0; font-weight: bold; font-size: 60px">Tracker</span></a> here!</p>
+                <br>
+            </section>
+            <section>
+                <h1 style="font-size: 40px">Contact Us</h1>
+                <form action="" style="align-self: center">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="comments" rows="4"></textarea>
+
+                    <label for="city">Your city:</label>
+                    <select id="city" name="city">
+                        <option value="astana">Astana</option>
+                        <option value="almaty">Almaty</option>
+                    </select>
+
+                    <button type="submit">Send!</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p style="font-weight: bold">SE-2331</p>
+            <ul>
+                <li>Pavel Lukoyanov</li>
+                <li>Maksat Sagyndyk</li>
+                <li>Amir Kairov</li>
+            </ul>
+        </footer>
+    </body>
+</html>
