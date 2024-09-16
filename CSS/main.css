@@ -94,13 +94,14 @@ h1 {
     text-align: center;
 }
 .sectionForm {
-    background: linear-gradient(22deg, rgb(255, 78, 78) 0%, rgb(255, 99, 51) 35%, rgb(83, 124, 255) 100%);
+    background: linear-gradient(22deg, rgb(255 161 161) 0%, rgb(255 102 210) 35%, rgb(104 137 239) 100%);
+    padding: 20px 0 40px 0;
 }
 nav {
     display: flex;
     gap: 40px
 }
-a {
+a, label {
     font-size: 20px;
 }
 main {
@@ -128,6 +129,7 @@ img {
 }
 input, button, textarea, select {
     min-height: 50px;
+    min-width: 300px;
     border-radius: 15px;
     padding: 8px;
     font-size: 20px;
