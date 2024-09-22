@@ -36,10 +36,19 @@ header {
     border-radius: 25px;
     background-color: #ffffff36;
     backdrop-filter: blur(15px);
+    transition-duration: 1s;
+}
+.headerFullscreen {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 0;
+    max-width: 100%;
 }
 #navHeader {
     display: flex;
     align-items: center;
+    gap: 10px
 }
 section {
     max-width: 1480px;
@@ -64,18 +73,28 @@ section {
     margin-left: -20px;
     border-radius: 0;
 }
-#welcomeScreen {
+.welcomeScreen {
     background-image: url("../SVG/welcomeScreen.svg");
     background-size: cover;
     background-position: center;
 }
-#starScreen {
+.starScreen {
     background-image: url("../SVG/starScreen.svg");
     background-size: cover;
     background-position: center;
 }
-#goldScreen {
+.goldScreen {
     background-image: url("../SVG/goldScreen.svg");
+    background-size: cover;
+    background-position: center;
+}
+.runningScreen {
+    background-image: url("../IMG/running.webp");
+    background-size: cover;
+    background-position: center;
+}
+.swimmingScreen {
+    background-image: url("../IMG/swimming.png");
     background-size: cover;
     background-position: center;
 }
@@ -97,12 +116,25 @@ h1 {
     background: linear-gradient(22deg, rgb(255 161 161) 0%, rgb(255 102 210) 35%, rgb(104 137 239) 100%);
     padding: 20px 0 40px 0;
 }
-nav {
+.btnFrame {
     display: flex;
-    gap: 40px
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    height: 50px;
+    transition-duration: 0.4s;
+    border-radius: 15px;
+}
+.btnFrame:hover {
+    background-color: #37373799;
+    color: #ffffff;
 }
 a, label {
     font-size: 20px;
+}
+label {
+    color: #ffffff;
 }
 main {
     display: flex;

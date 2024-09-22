@@ -3,25 +3,28 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
+        <link href="CSS/LazyLukPack.css" rel="stylesheet" type="text/css">
         <meta charset="UTF-8">
         <title>BodyCap</title>
     </head>
     <body>
-        <div class="emptyGap"></div>
         <header>
             <nav id="navHeader">
-                <a href="index.html">Home</a>
-                <a href="swimming.html">Swimming</a>
-                <a href="running.html">Running</a>
-                <h1 style="font-size: 40px">BodyCap</h1>
-                <a href="bicycling.html">Bicycling</a>
-                <a href="climbing.html">Climbing</a>
-                <a href="tracker.html">Tracker</a>
+                <a href="index.html" class="btnFrame">Home</a>
+                <a href="swimming.html" class="btnFrame">Swimming</a>
+                <a href="running.html" class="btnFrame">Running</a>
+                <h1 style="font-size: 40px; margin: 0 10px" class="clickable">BodyCap</h1>
+                <a href="bicycling.html" class="btnFrame">Bicycling</a>
+                <a href="climbing.html" class="btnFrame">Climbing</a>
+                <a href="tracker.html" class="btnFrame">Tracker</a>
             </nav>
         </header>
         <main>
+
+            <section class="sectionFullscreen runningScreen">
+                <h1 class="h1Ultra" style="color:black">Running</h1>
+            </section>
             <section>
-                <img src="https://feelgoodrunning.com/wp-content/uploads/2020/09/Runners-Picture.jpg" width="100%" height="10%" alt="Running">
                 <h1 style="font-size: 40px; align-self: center">Learn more about running!</h1>
                 <br>
                 <p style="font-size: 20px; align-self: center">
@@ -31,14 +34,11 @@
                 </p>
                 <br>
             </section>
-            <section>
-                <h1 style="align-self: center; font-weight: normal">BodyCap &mdash; the best way to track Your Body.</h1>
-            </section>
-            <section>
+            <section class="sectionForm">
                 <h1 style="font-size: 40px; align-self: center">Find out your daily progress!</h1>
                 <br>
                 <p style="font-size: 20px; align-self: center">Please enter how much you ran today!</p>
-                <input type="number" name="weight" placeholder="Time spent running: ..." style="width: 30%; height: 30%; align-self:center">
+                <input type="number" name="weight" placeholder="Time spent running: (minutes)..." style="width: 30%; height: 30%; align-self:center">
                 <br>
             </section>
         </main>

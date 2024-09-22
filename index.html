@@ -3,26 +3,27 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
+        <link href="CSS/LazyLukPack.css" rel="stylesheet" type="text/css">
         <meta charset="UTF-8">
         <title>BodyCap</title>
     </head>
     <body>
         <header>
             <nav id="navHeader">
-                <a href="index.html">Home</a>
-                <a href="swimming.html">Swimming</a>
-                <a href="running.html">Running</a>
-                <h1 style="font-size: 40px">BodyCap</h1>
-                <a href="bicycling.html">Bicycling</a>
-                <a href="climbing.html">Climbing</a>
-                <a href="tracker.html">Tracker</a>
+                <a href="index.html" class="btnFrame">Home</a>
+                <a href="swimming.html" class="btnFrame">Swimming</a>
+                <a href="running.html" class="btnFrame">Running</a>
+                <h1 style="font-size: 40px; margin: 0 10px" class="clickable">BodyCap</h1>
+                <a href="bicycling.html" class="btnFrame">Bicycling</a>
+                <a href="climbing.html" class="btnFrame">Climbing</a>
+                <a href="tracker.html" class="btnFrame">Tracker</a>
             </nav>
         </header>
         <main>
-            <section class="sectionFullscreen" id="welcomeScreen">
+            <section class="sectionFullscreen welcomeScreen">
                 <h1 class="h1Ultra">Welcome<br>to BodyCap!</h1>
             </section>
-            <section class="sectionFullscreen" id="starScreen">
+            <section class="sectionFullscreen starScreen">
                 <h1>Learn about a</h1>
                 <h1 class="h1Ultra">healthy lifestyle</h1>
                 <h1>BodyCap &mdash; the best way to track Your Body.</h1>
@@ -41,14 +42,13 @@
                             <option value="astana">Astana</option>
                             <option value="almaty">Almaty</option>
                         </select>
-                        <button type="submit">Send!</button>
+                        <button type="submit" class="clickable">Send!</button>
                 </form>
             </section>
-            <section>
-                <h1 style="font-size: 40px">Tracker!</h1>
-                <br>
-                <p style="font-size: 20px; align-self: center">Try <a href="tracker.html"><span style="color: #ff00d0; font-weight: bold; font-size: 60px">Tracker</span></a> here!</p>
-                <br>
+            <section class="goldScreen flex-justifycenter">
+                <h1>Try</h1>
+                <h1 class="h1Ultra clickable">Tracker</h1>
+                <h1>here.</h1>
             </section>
         </main>
         <footer>
