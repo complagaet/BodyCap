@@ -51,7 +51,6 @@ header {
     gap: 10px
 }
 section {
-    max-width: 1480px;
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -103,6 +102,14 @@ h1 {
     font-weight: normal;
     text-align: center;
 }
+h3 {
+    font-size: 20px;
+    font-family: "Roboto-Bold", "Arial", sans-serif;
+    font-weight: normal;
+}
+.white {
+    color: white;
+}
 
 .emptyGap {
     height: 80px
@@ -115,6 +122,9 @@ h1 {
 .sectionForm {
     background: linear-gradient(22deg, rgb(255 161 161) 0%, rgb(255 102 210) 35%, rgb(104 137 239) 100%);
     padding: 20px 0 40px 0;
+}
+.sectionSteps {
+    background: linear-gradient(22deg, rgb(255 106 40) 0%, rgb(255 38 38) 35%, rgb(255 91 143) 100%);
 }
 .btnFrame {
     display: flex;
@@ -167,6 +177,12 @@ input, button, textarea, select {
     font-size: 20px;
     border: none;
     background-color: #ffffff;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
 }
 form {
     display: flex;

@@ -1,0 +1,34 @@
+.iconContainer {
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    background-color: #ebe0fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconHeight {
+    background-image: url('../SVG/height.svg');
+    height: 35px;
+    width: 35px;
+}
+.iconWeight {
+    background-image: url('../SVG/weight.svg');
+    height: 35px;
+    width: 35px;
+}
+.iconNext {
+    background-image: url('../SVG/next.svg');
+    height: 35px;
+    width: 35px;
+}
+.iconStats{
+    background-image: url('../SVG/stats.svg');
+    height: 35px;
+    width: 35px;
+}
+.iconGoal {
+    background-image: url('../SVG/goal.svg');
+    height: 35px;
+    width: 35px;
+}

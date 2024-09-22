@@ -3,11 +3,13 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
+        <link href="CSS/icons.css" rel="stylesheet" type="text/css">
         <link href="CSS/LazyLukPack.css" rel="stylesheet" type="text/css">
         <meta charset="UTF-8">
         <title>BodyCap</title>
     </head>
     <body>
+        <div class="emptyGap"></div>
         <header>
             <nav id="navHeader">
                 <a href="index.html" class="btnFrame">Home</a>
@@ -20,10 +22,71 @@
             </nav>
         </header>
         <main>
-            <section class="sectionFullscreen goldScreen">
-                <h1>The</h1>
+            <section class="sectionFullscreen goldScreen" style="display: none">
                 <h1 class="h1Ultra">Tracker</h1>
-                <h1>is not ready yet!</h1>
+            </section>
+            <section class="flex-justifyspacebetween">
+                <h3>BMI</h3>
+                <div class="flex-aligncenter flex-justifycenter" style="gap: 20px; width: 100%; padding: 0 20px 0 0">
+                    <div class="pie animate" style="--p: 88; --c: #69fb69"><h1>50</h1></div>
+                    <div class="flex-column" style="gap: 10px">
+                        <div class="flex" style="gap: 10px">
+                            <div class="iconContainer">
+                                <svg class="iconWeight"></svg>
+                            </div>
+                            <div>
+                                <h3>Weight</h3>
+                                <p>50 kg</p>
+                            </div>
+                        </div>
+                        <div class="flex" style="gap: 10px">
+                            <div class="iconContainer">
+                                <svg class="iconHeight"></svg>
+                            </div>
+                            <div>
+                                <h3>Height</h3>
+                                <p>175 cm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="clickable" style="padding: 0; min-height: fit-content; justify-content: flex-end; margin-top: -10px">
+                    Edit
+                    <svg class="iconNext"></svg>
+                </button>
+            </section>
+            <section class="sectionSteps flex-justifyspacebetween">
+                <h3 class="white">Steps</h3>
+                <div class="flex-aligncenter flex-justifycenter" style="gap: 20px; width: 100%; padding: 0 20px 0 0">
+                    <div class="pie animate" style="--p: 48; --c: #ffdada"><h1 class="white">7032</h1></div>
+                    <div class="flex-column" style="gap: 10px">
+                        <div class="flex" style="gap: 10px">
+                            <div class="iconContainer" style="background-color: #ffdada">
+                                <svg class="iconGoal"></svg>
+                            </div>
+                            <div>
+                                <h3 class="white">Goal</h3>
+                                <p class="white">8900 steps</p>
+                            </div>
+                        </div>
+                        <div class="flex" style="gap: 10px">
+                            <div class="iconContainer" style="background-color: #ffdada">
+                                <svg class="iconStats"></svg>
+                            </div>
+                            <div>
+                                <h3 class="white">Move</h3>
+                                <p class="white">260 kcal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="clickable white" style="padding: 0; min-height: fit-content; justify-content: flex-end; background-color: #00000000; margin-top: -10px">
+                    Edit
+                    <svg class="iconNext" style="filter: invert(100%)"></svg>
+                </button>
+            </section>
+            <section style="width: 100%">
+                <h3>Exercises</h3>
             </section>
         </main>
         <footer>
