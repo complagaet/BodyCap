@@ -69,7 +69,12 @@ section {
     align-items: center;
     justify-content: center;
     background-color: #5685ff;
-    margin-left: -20px;
+    margin-left: -23px;
+    border-radius: 0;
+}
+.sectionWideInvisible {
+    width: 100%;
+    background-color: #00000000;
     border-radius: 0;
 }
 .welcomeScreen {
@@ -140,7 +145,7 @@ h3 {
     background-color: #37373799;
     color: #ffffff;
 }
-a, label {
+a, p, label {
     font-size: 20px;
 }
 label {
@@ -176,7 +181,7 @@ input, button, textarea, select {
     padding: 8px;
     font-size: 20px;
     border: none;
-    background-color: #ffffff;
+    background-color: #f9f8ff;
 }
 button {
     display: flex;

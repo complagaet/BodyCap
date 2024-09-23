@@ -21,15 +21,16 @@
                 <a href="tracker.html" class="btnFrame">Tracker</a>
             </nav>
         </header>
-        <main>
+        <main style="max-width: 1480px;">
             <section class="sectionFullscreen goldScreen" style="display: none">
                 <h1 class="h1Ultra">Tracker</h1>
             </section>
-            <section class="flex-justifyspacebetween">
-                <h3>BMI</h3>
-                <div class="flex-aligncenter flex-justifycenter" style="gap: 20px; width: 100%; padding: 0 20px 0 0">
+
+            <section class="sectionWideInvisible flex-row flex-justifycenter" style="gap: 20px; flex-wrap: wrap">
+                <div class="flex-aligncenter flex-justifycenter" style="gap: 20px">
                     <div class="pie animate" style="--p: 88; --c: #69fb69"><h1>50</h1></div>
                     <div class="flex-column" style="gap: 10px">
+                        <h3>MBI</h3>
                         <div class="flex" style="gap: 10px">
                             <div class="iconContainer">
                                 <svg class="iconWeight"></svg>
@@ -50,23 +51,17 @@
                         </div>
                     </div>
                 </div>
-                <button class="clickable" style="padding: 0; min-height: fit-content; justify-content: flex-end; margin-top: -10px">
-                    Edit
-                    <svg class="iconNext"></svg>
-                </button>
-            </section>
-            <section class="sectionSteps flex-justifyspacebetween">
-                <h3 class="white">Steps</h3>
-                <div class="flex-aligncenter flex-justifycenter" style="gap: 20px; width: 100%; padding: 0 20px 0 0">
-                    <div class="pie animate" style="--p: 48; --c: #ffdada"><h1 class="white">7032</h1></div>
+                <div class="flex-aligncenter flex-justifycenter" style="gap: 20px">
+                    <div class="pie animate" style="--p: 48; --c: #ffdada"><h1 >7032</h1></div>
                     <div class="flex-column" style="gap: 10px">
+                        <h3>Steps</h3>
                         <div class="flex" style="gap: 10px">
                             <div class="iconContainer" style="background-color: #ffdada">
                                 <svg class="iconGoal"></svg>
                             </div>
                             <div>
-                                <h3 class="white">Goal</h3>
-                                <p class="white">8900 steps</p>
+                                <h3>Goal</h3>
+                                <p>8900 st.</p>
                             </div>
                         </div>
                         <div class="flex" style="gap: 10px">
@@ -74,12 +69,28 @@
                                 <svg class="iconStats"></svg>
                             </div>
                             <div>
-                                <h3 class="white">Move</h3>
-                                <p class="white">260 kcal</p>
+                                <h3>Move</h3>
+                                <p>260 kcal</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section class="flex-justifyspacebetween">
+                <h3>Weight &amp; Height</h3>
+                <button>Edit<svg class="iconPlus"></svg></button>
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #f9f8ff">
+                        <svg class="iconI"></svg>
+                    </div>
+                    <p>Body Mass Index (BMI) is a measurement that helps estimate whether a person has a healthy body weight for their height. It is calculated by dividing a person's weight in kilograms by the square of their height in meters (kg/m²).</p>
+                </div>
+                <p>To determine your BMI, we need your weight and height, which will be used in the calculation.</p>
+            </section>
+
+            <section class="sectionSteps flex-justifyspacebetween">
+                <h3 class="white">Steps</h3>
                 <button class="clickable white" style="padding: 0; min-height: fit-content; justify-content: flex-end; background-color: #00000000; margin-top: -10px">
                     Edit
                     <svg class="iconNext" style="filter: invert(100%)"></svg>

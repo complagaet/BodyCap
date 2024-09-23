@@ -1,4 +1,6 @@
 .iconContainer {
+    min-height: 45px;
+    min-width: 45px;
     height: 45px;
     width: 45px;
     border-radius: 10px;
@@ -29,6 +31,16 @@
 }
 .iconGoal {
     background-image: url('../SVG/goal.svg');
+    height: 35px;
+    width: 35px;
+}
+.iconPlus {
+    background-image: url('../SVG/plus.svg');
+    height: 35px;
+    width: 35px;
+}
+.iconI {
+    background-image: url('../SVG/i.svg');
     height: 35px;
     width: 35px;
 }
