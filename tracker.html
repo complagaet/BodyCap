@@ -21,7 +21,7 @@
                 <a href="tracker.html" class="btnFrame">Tracker</a>
             </nav>
         </header>
-        <main style="max-width: 1480px;">
+        <main>
             <section class="sectionFullscreen goldScreen" style="display: none">
                 <h1 class="h1Ultra">Tracker</h1>
             </section>
@@ -77,27 +77,58 @@
                 </div>
             </section>
 
-            <section class="flex-justifyspacebetween">
+            <section>
                 <h3>Weight &amp; Height</h3>
                 <button>Edit<svg class="iconPlus"></svg></button>
+                <p>To determine your BMI, we need your weight and height, which will be used in the calculation.</p>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
                         <svg class="iconI"></svg>
                     </div>
                     <p>Body Mass Index (BMI) is a measurement that helps estimate whether a person has a healthy body weight for their height. It is calculated by dividing a person's weight in kilograms by the square of their height in meters (kg/m²).</p>
                 </div>
-                <p>To determine your BMI, we need your weight and height, which will be used in the calculation.</p>
             </section>
 
-            <section class="sectionSteps flex-justifyspacebetween">
-                <h3 class="white">Steps</h3>
-                <button class="clickable white" style="padding: 0; min-height: fit-content; justify-content: flex-end; background-color: #00000000; margin-top: -10px">
-                    Edit
-                    <svg class="iconNext" style="filter: invert(100%)"></svg>
-                </button>
+            <section>
+                <h3>Steps</h3>
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #f9f8ff">
+                        <svg class="iconSneaker"></svg>
+                    </div>
+                    <div class="flex-column" style="gap: 10px; width: 100%">
+                        <p>Add information about your steps today. This information will be used to calculate calories burned.</p>
+                        <button>Add steps<svg class="iconPlus"></svg></button>
+                    </div>
+                </div>
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #f9f8ff">
+                        <svg class="iconGoal"></svg>
+                    </div>
+                    <div class="flex-column" style="gap: 10px; width: 100%">
+                        <p>Set a goal for steps per day. This will help you monitor your progress and keep up with the pace.</p>
+                        <button>Set goal<svg class="iconPlus"></svg></button>
+                    </div>
+                </div>
             </section>
+
             <section style="width: 100%">
                 <h3>Exercises</h3>
+                <div class="flex" style="gap: 10px; width: 100%; flex-wrap: wrap">
+                    <button class="buttonExercise colorsSwimming clickable">Swimming</button>
+                    <button class="buttonExercise colorsRunning clickable">Running</button>
+                    <button class="buttonExercise colorsBicycling clickable">Bicycling</button>
+                    <button class="buttonExercise colorsClimbing clickable">Climbing</button>
+                </div>
+            </section>
+
+            <section>
+                <h3>Steps Chart</h3>
+                <div class="chartWrapper"></div>
+            </section>
+
+            <section>
+                <h3>Exercise Chart</h3>
+                <div class="chartWrapper"></div>
             </section>
         </main>
         <footer>

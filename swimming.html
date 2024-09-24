@@ -3,7 +3,9 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
+        <link href="CSS/icons.css" rel="stylesheet" type="text/css">
         <link href="CSS/LazyLukPack.css" rel="stylesheet" type="text/css">
+        <link href="CSS/bootstrap.css" rel="stylesheet" type="">
         <meta charset="UTF-8">
         <title>BodyCap</title>
     </head>
@@ -19,12 +21,13 @@
                 <a href="tracker.html" class="btnFrame">Tracker</a>
             </nav>
         </header>
+
+        <section class="sectionFullscreen swimmingScreen">
+            <h1 class="h1Ultra" style="color: black;">Swimming</h1>
+        </section>
+
         <main>
-            <section class="sectionFullscreen swimmingScreen">
-                <h1 class="h1Ultra">Swimming</h1>
-            </section>
-            <section>
-                <img src="https://avatars.mds.yandex.net/i?id=3c92c2acebe5298992d42c58a44f4e53_l-4246702-images-thumbs&n=13" width="100%" alt="Swimming">
+            <section style="display: block; width: 100%; color: darkcyan;">
                 <h1 style="font-size: 40px; align-self: center">Learn more about swimming!</h1>
                 <br>
                 <p style="font-size: 20px; align-self: center">
@@ -35,15 +38,38 @@
                 <br>
             </section>
             <section>
-                <h1 style="align-self: center; font-weight: normal">BodyCap &mdash; the best way to track Your Body.</h1>
+                <h3>Track your progress!</h3>
+                <div class="flex flex-justifycenter flex-aligncenter" style="gap: 10px; width: 100%">
+                    <button class="buttonExercise colorsTracker clickable" style="max-width: 350px">Tracker</button>
+                    <svg class="iconNext"></svg>
+                    <button class="buttonExercise colorsSwimming clickable" style="max-width: 350px">Swimming</button>
+                </div>
             </section>
-            <section>
-                <h1 style="font-size: 40px; align-self: center">Find out your daily progress!</h1>
-                <br>
-                <p style="font-size: 20px; align-self: center">Please enter how much you swam today!</p>
-                <input type="number" name="weight" placeholder="Time swimmed: ..." style="width: 30%; height: 30%; align-self:center">
-                <br>
-            </section>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="IMG/Swimming1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="IMG/Swimming2.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="IMG/Swimming3.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="IMG/Swimming4.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              
         </main>
         <footer>
             <p style="font-weight: bold">SE-2331</p>

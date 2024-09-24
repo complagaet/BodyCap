@@ -21,6 +21,8 @@
 }
 .iconNext {
     background-image: url('../SVG/next.svg');
+    min-height: 35px;
+    min-width: 35px;
     height: 35px;
     width: 35px;
 }
@@ -41,6 +43,16 @@
 }
 .iconI {
     background-image: url('../SVG/i.svg');
+    height: 35px;
+    width: 35px;
+}
+.iconSneaker {
+    background-image: url('../SVG/sneaker.svg');
+    height: 35px;
+    width: 35px;
+}
+.iconWarning {
+    background-image: url('../SVG/warning.svg');
     height: 35px;
     width: 35px;
 }

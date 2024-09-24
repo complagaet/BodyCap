@@ -3,12 +3,12 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
+        <link href="CSS/icons.css" rel="stylesheet" type="text/css">
         <link href="CSS/LazyLukPack.css" rel="stylesheet" type="text/css">
         <meta charset="UTF-8">
         <title>Bicycling Benefits - BodyCap</title>
     </head>
     <body>
-        <div class="emptyGap"></div>
         <header>
             <nav id="navHeader">
                 <a href="index.html" class="btnFrame">Home</a>
@@ -20,34 +20,82 @@
                 <a href="tracker.html" class="btnFrame">Tracker</a>
             </nav>
         </header>
+
+        <section class="sectionFullscreen bicyclingScreen">
+            <h1 class="h1Ultra" style="color:black">Bicycling</h1>
+        </section>
+
         <main>
             <section>
-                <h1 style="font-size: 40px">Bicycling: A Path to Better Health</h1>
-                <p style="font-size: 20px; align-self: center">
-                    Bicycling is one of the most effective ways to stay healthy. Whether you ride for fun, fitness, or as a means of transportation, cycling brings numerous benefits.
-                </p>
+                <h1>Bicycling: A Path to Better Health</h1>
+                <img src="/IMG/bicycling-1.avif" alt="Bicycling" style="object-fit: cover; height: 300px">
             </section>
+
             <section>
-                <h2 style="font-size: 35px">Key Health Benefits</h2>
-                <ul style="font-size: 20px">
-                    <li>Improves cardiovascular health by strengthening your heart and reducing the risk of heart disease.</li>
-                    <li>Boosts mental well-being by reducing stress, anxiety, and depression.</li>
-                    <li>Strengthens muscles, particularly in your legs and lower body, promoting endurance and balance.</li>
-                    <li>Helps with weight management by burning calories and boosting metabolism.</li>
-                    <li>Supports joint health by being a low-impact exercise, especially beneficial for those with joint pain or arthritis.</li>
-                </ul>
+                <h1>Key Health Benefits</h1>
+
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #f9f8ff">
+                        <h1>1</h1>
+                    </div>
+                    <p>Improves cardiovascular health by strengthening your heart and reducing the risk of heart disease.</p>
+                </div>
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #f9f8ff">
+                        <h1>2</h1>
+                    </div>
+                    <p>Boosts mental well-being by reducing stress, anxiety, and depression.</p>
+                </div>
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #f9f8ff">
+                        <h1>3</h1>
+                    </div>
+                    <p>Strengthens muscles, particularly in your legs and lower body, promoting endurance and balance.</p>
+                </div>
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #f9f8ff">
+                        <h1>4</h1>
+                    </div>
+                    <p>Helps with weight management by burning calories and boosting metabolism.</p>
+                </div>
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #f9f8ff">
+                        <h1>5</h1>
+                    </div>
+                    <p>Supports joint health by being a low-impact exercise, especially beneficial for those with joint pain or arthritis.</p>
+                </div>
             </section>
-            <section>
-                <h2 style="font-size: 35px">Why Choose Cycling?</h2>
+
+            <section style="width: 100%">
+                <h1>Why Choose Cycling?</h1>
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #f9f8ff">
+                        <svg class="iconI"></svg>
+                    </div>
+                    <p>Bicycling is one of the most effective ways to stay healthy. Whether you ride for fun, fitness, or as a means of transportation, cycling brings numerous benefits.</p>
+                </div>
                 <p style="font-size: 20px">
                     Not only is cycling an environmentally friendly way to get around, but it's also easy to fit into your daily routine. Whether you're cycling to work, exploring nature, or engaging in a social bike ride, it offers a fun and sustainable way to stay active.
                 </p>
             </section>
             <section>
-                <h2 style="font-size: 35px">How to Get Started</h2>
-                <p style="font-size: 20px">
-                    If you're new to cycling, start small by riding short distances. As you gain confidence, you can increase the length and intensity of your rides. Remember to always wear a helmet and follow road safety rules to protect yourself while enjoying the ride.
-                </p>
+                <h1>How to Get Started</h1>
+                <p>If you're new to cycling, start small by riding short distances. As you gain confidence, you can increase the length and intensity of your rides.</p>
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer" style="background-color: #ffe642">
+                        <svg class="iconWarning"></svg>
+                    </div>
+                    <p>Remember to always wear a helmet and follow road safety rules to protect yourself while enjoying the ride.</p>
+                </div>
+            </section>
+
+            <section>
+                <h1>Track your progress!</h1>
+                <div class="flex flex-justifycenter flex-aligncenter" style="gap: 10px; width: 100%">
+                    <button class="buttonExercise colorsTracker clickable" style="max-width: 350px">Tracker</button>
+                    <svg class="iconNext"></svg>
+                    <button class="buttonExercise colorsBicycling clickable" style="max-width: 350px">Bicycling</button>
+                </div>
             </section>
         </main>
         <footer>
