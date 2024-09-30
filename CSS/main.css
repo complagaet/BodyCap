@@ -101,24 +101,33 @@ section {
     background-position: center;
 }
 .runningScreen {
-    background-image: url("../IMG/running.webp");
+    background-image: url("../IMG/running/running.webp");
     background-size: cover;
     background-position: center;
 }
 .swimmingScreen {
-    background-image: url("../IMG/swimming.png");
+    background-image: url("../IMG/swimming/swimming.png");
     background-size: cover;
     background-position: center;
 }
 .bicyclingScreen {
-    background-image: url("../IMG/bicycling.jpg");
+    background-image: url("../IMG/bicycling/bicycling.jpg");
     background-size: cover;
     background-position: center;
+}
+.climbingScreen {
+    background-image: url("../IMG/climbing/climbing.png");
+    background-size: cover;
+    background-position: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 h1 {
     font-family: "Roboto-Bold", "Arial", sans-serif;
     font-weight: normal;
     text-align: center;
+    font-size: 24px;
 }
 h3 {
     font-size: 20px;
@@ -152,6 +161,7 @@ h3 {
     height: 50px;
     transition-duration: 0.4s;
     border-radius: 15px;
+    color: #000000;
 }
 .btnFrame:hover {
     background-color: #37373799;
@@ -159,9 +169,15 @@ h3 {
 }
 a, p, label {
     font-size: 20px;
+    margin: 0;
+    font-weight: normal;
+    line-height: normal;
+}
+p, label {
+    color: black;
 }
 label {
-    color: #ffffff;
+    color: white;
 }
 main {
     display: flex;
@@ -174,6 +190,7 @@ main {
 footer {
     width: 100%;
     padding: 15px;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -183,6 +200,7 @@ footer {
 }
 ul {
     list-style-type: none;
+    margin: 0;
 }
 img {
     border-radius: 18px;
@@ -250,4 +268,15 @@ form {
     flex-direction: column;
     width: 300px;
     gap: 10px
+}
+
+.carousel-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

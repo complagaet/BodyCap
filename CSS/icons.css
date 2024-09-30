@@ -56,3 +56,8 @@
     height: 35px;
     width: 35px;
 }
+.iconEye {
+    background-image: url('../SVG/eye.svg');
+    height: 35px;
+    width: 35px;
+}
