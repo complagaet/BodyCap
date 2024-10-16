@@ -61,3 +61,8 @@
     height: 35px;
     width: 35px;
 }
+.iconCross {
+    background-image: url('../SVG/cross.svg');
+    height: 35px;
+    width: 35px;
+}
