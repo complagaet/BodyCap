@@ -1,4 +1,4 @@
-let storage = new Storage("BodyCap", User)
+const storage = new Storage("BodyCap", User)
 User = storage.data
 
 let getLast = (arr) => {
