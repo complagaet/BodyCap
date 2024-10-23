@@ -26,6 +26,8 @@ class smoothModal extends BobatronDynamic {
     modalWindowCSS = "height: 600px; width: 800px"; // Addition CSS to Modal Window
     modalScreen; // Wrapper
 
+    escCollapse = true
+
     collapsedElementHidingTimeout = 0;
     expandingTime = 0.5;
     collapsingTime = 0.5;
@@ -169,6 +171,16 @@ class smoothModal extends BobatronDynamic {
 
         setTimeout(() => {
             this.collapsedElementClone.style.opacity = `0`
+
+            if (this.escCollapse) {
+                let escCollapse = (ev) => {
+                    if (ev.key === "Escape") {
+                        this.collapse();
+                        document.removeEventListener("keydown", escCollapse)
+                    }
+                }
+                document.addEventListener("keydown", escCollapse)
+            }
         }, (this.expandingTime * 1000) + (this.collapsedElementHidingTimeout * 1000))
 
         setTimeout(() => {

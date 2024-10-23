@@ -3,6 +3,11 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="JS/Bobatron.js"></script>
+        <script src="JS/BobatronDynamic.js"></script>
+        <script src="JS/Storage.js"></script>
+        <script src="JS/User.js"></script>
+        <script src="JS/swimming.js"></script>
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
         <link href="CSS/icons.css" rel="stylesheet" type="text/css">
         <link href="CSS/LazyLukPack.css" rel="stylesheet" type="text/css">
@@ -186,17 +191,42 @@
                 </div>
             </section>
 
-            <section>
+            <section style="width: 100%">
                 <h1>Track your progress!</h1>
-
-                <div class="flex flex-justifycenter flex-aligncenter" style="gap: 10px; width: 100%">
-                    <button class="buttonExercise colorsTracker clickable" style="max-width: 350px">Tracker</button>
-                    <svg class="iconNext"></svg>
-                    <button class="buttonExercise colorsSwimming clickable" style="max-width: 350px">Swimming</button>
+                <div class="d-flex" style="width: 100%;">
+                    <button class="buttonExercise colorsTracker clickable" style="flex: 1; max-width: 50%;">Tracker</button>
+                    
+                    <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; max-width: 220px; margin-left: 20px;">
+                        <select class="form-control" style="max-width: 230px; margin-bottom: 5px;">
+                            <option disabled selected>Select your age category</option>
+                            <option value="17-21">17-21</option>
+                            <option value="22-26">22-26</option>
+                            <option value="27-31">27-31</option>
+                            <option value="32-36">32-36</option>
+                            <option value="37-41">37-41</option>
+                            <option value="42-46">42-46</option>
+                            <option value="47-51">47-51</option>
+                            <option value="52-56">52-56</option>
+                            <option value="57-61">57-61</option>
+                            <option value="62+">62+</option>
+                        </select>
+                        
+                        <input type="number" id="metersSwamInput" class="form-control" placeholder="Meters Swam" style="max-width: 220px; margin-bottom: 10px;">
+                        
+                        <button class="btn btn-success" id="progressButton" style="max-width: 200px;margin-top:10px;">Find out your progress!</button>
+                    </div>
                 </div>
             </section>
+                 
+          
+<div id="feedbackBox" class="feedback-box">
+    <div class="feedback-content">
+        <h4>Tracker Feedback</h4>
+        <p id="feedbackMessage"></p>
+        <button id="closeFeedback" class="close-button">Close</button>
+    </div>
+</div>
         </main>
-
         <footer>
             <p style="font-weight: bold">SE-2331</p>
             <ul>

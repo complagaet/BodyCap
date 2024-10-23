@@ -139,17 +139,22 @@ let updateDashboard = () => {
 let updateWeightChart = () => {
     const data = User.basics.weight.map(entry => entry[0])
     const labels = User.basics.weight.map(entry => entry[1])
-    console.log(data)
 
     charts.weight.data = {
         labels: labels,
-            datasets: [
+        datasets: [
             {
+                tension: 0.4,
                 label: 'Weight',
                 data: data,
-                backgroundColor: "#1a1a1a"
+                backgroundColor: "#1a1a1a",
+                borderColor: "#1a1a1a",
             }
         ]
+    }
+    charts.weight.options.scales.y = {
+        suggestedMin: Math.min(...data) - 0.5,
+        suggestedMax: Math.max(...data) + 0.5
     }
 
     charts.weight.update();
@@ -170,7 +175,6 @@ window.addEventListener("load", () => {
     }
 
     let sections = document.getElementsByTagName("section")
-    console.log(sections)
     window.scrollTo(0, 0)
     for (let i = 0; i < sections.length; i++) {
         let section = sections[i]
