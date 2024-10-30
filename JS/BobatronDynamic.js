@@ -28,7 +28,7 @@ class smoothModal extends BobatronDynamic {
 
     escCollapse = true
 
-    collapsedElementHidingTimeout = 0;
+    collapsedElementCloneHidingTimeout = 0;
     expandingTime = 0.5;
     collapsingTime = 0.5;
 
@@ -79,6 +79,7 @@ class smoothModal extends BobatronDynamic {
             width: 100%;
             position: absolute;
             transition-duration: 1s;
+            z-index: ${this.zIndex};
         `
         collapsedElementClone.style.cssText += this.collapsedElementCloneCSS
         collapsedElementClone.innerHTML = this.collapsedElement.innerHTML;
@@ -181,11 +182,11 @@ class smoothModal extends BobatronDynamic {
                 }
                 document.addEventListener("keydown", escCollapse)
             }
-        }, (this.expandingTime * 1000) + (this.collapsedElementHidingTimeout * 1000))
+        }, (this.expandingTime * 1000) + (this.collapsedElementCloneHidingTimeout * 1000))
 
         setTimeout(() => {
             this.collapsedElementClone.style.display = `none`
-        }, (this.expandingTime * 1000) + (this.collapsedElementHidingTimeout * 1000) +  (parseFloat(this.collapsedElementClone.style.transitionDuration) * 1000))
+        }, (this.expandingTime * 1000) + (this.collapsedElementCloneHidingTimeout * 1000) +  (parseFloat(this.collapsedElementClone.style.transitionDuration) * 1000))
     }
 
     expand() {

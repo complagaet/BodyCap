@@ -8,6 +8,7 @@
         <script src="JS/chart/dist/chart.umd.js"></script>
         <script src="JS/Storage.js"></script>
         <script src="JS/User.js"></script>
+        <script src="JS/HeaderAndTools.js"></script>
         <script src="JS/Tracker.js"></script>
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
         <link href="CSS/icons.css" rel="stylesheet" type="text/css">
@@ -29,15 +30,18 @@
     </head>
     <body>
         <div class="emptyGap"></div>
+        <div id="passwordWindow" class="button buttonExercise colorsTracker passwordWindow" style="top: -100px; height: 100px">Tracker</div>
         <header>
             <nav id="navHeader">
-                <a href="index.html" class="btnFrame">Home</a>
+                <a href="index.html" style="color: #000000; text-decoration: none">
+                    <h1 style="font-size: 40px; margin: 0 10px" class="clickable">BodyCap</h1>
+                </a>
                 <a href="swimming.html" class="btnFrame">Swimming</a>
                 <a href="running.html" class="btnFrame">Running</a>
-                <h1 style="font-size: 40px; margin: 0 10px" class="clickable">BodyCap</h1>
                 <a href="bicycling.html" class="btnFrame">Bicycling</a>
                 <a href="climbing.html" class="btnFrame">Climbing</a>
                 <a href="tracker.html" class="btnFrame">Tracker</a>
+                <button id="headerSettings" class="button miniButtonWithIcon initiallyHidden"><svg class="iconMolotok"></svg>Settings</button>
             </nav>
         </header>
 
@@ -52,8 +56,8 @@
                     <div class="flex-column" style="gap: 10px">
                         <h3>BMI</h3>
                         <div class="flex" style="gap: 10px">
-                            <div class="iconContainer">
-                                <svg class="iconWeight"></svg>
+                            <div class="iconContainer" style="background-color: #cacaff">
+                                <svg class="iconWeight" style="background-color: #000000"></svg>
                             </div>
                             <div>
                                 <h3>Weight</h3>
@@ -61,8 +65,8 @@
                             </div>
                         </div>
                         <div class="flex" style="gap: 10px">
-                            <div class="iconContainer">
-                                <svg class="iconHeight"></svg>
+                            <div class="iconContainer" style="background-color: #cacaff">
+                                <svg class="iconHeight" style="background-color: #000000"></svg>
                             </div>
                             <div>
                                 <h3>Height</h3>
@@ -77,7 +81,7 @@
                         <h3>Steps</h3>
                         <div class="flex" style="gap: 10px">
                             <div class="iconContainer" style="background-color: #ffdada">
-                                <svg class="iconGoal"></svg>
+                                <svg class="iconGoal" style="background-color: #000000"></svg>
                             </div>
                             <div>
                                 <h3>Goal</h3>
@@ -86,7 +90,7 @@
                         </div>
                         <div class="flex" style="gap: 10px">
                             <div class="iconContainer" style="background-color: #ffdada">
-                                <svg class="iconStats"></svg>
+                                <svg class="iconStats" style="background-color: #000000"></svg>
                             </div>
                             <div>
                                 <h3>Move</h3>
@@ -102,7 +106,7 @@
                 <button class="button" id="buttonBasics">Edit</button>
                 <p>To determine your BMI, we need your weight and height, which will be used in the calculation.</p>
                 <div class="flex" style="gap: 10px">
-                    <div class="iconContainer" style="background-color: #f9f8ff">
+                    <div class="iconContainer">
                         <svg class="iconI"></svg>
                     </div>
                     <p>Body Mass Index (BMI) is a measurement that helps estimate whether a person has a healthy body weight for their height. It is calculated by dividing a person's weight in kilograms by the square of their height in meters (kg/m²).</p>
@@ -112,7 +116,7 @@
             <section class="bobatron">
                 <h3>Steps</h3>
                 <div class="flex" style="gap: 10px">
-                    <div class="iconContainer" style="background-color: #f9f8ff">
+                    <div class="iconContainer">
                         <svg class="iconSneaker"></svg>
                     </div>
                     <div class="flex-column" style="gap: 10px; width: 100%">
@@ -121,7 +125,7 @@
                     </div>
                 </div>
                 <div class="flex" style="gap: 10px">
-                    <div class="iconContainer" style="background-color: #f9f8ff">
+                    <div class="iconContainer">
                         <svg class="iconGoal"></svg>
                     </div>
                     <div class="flex-column" style="gap: 10px; width: 100%">

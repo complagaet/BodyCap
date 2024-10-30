@@ -4,65 +4,88 @@
     height: 45px;
     width: 45px;
     border-radius: 10px;
-    background-color: #ebe0fd;
+    background-color: var(--default-iconContainer-color);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .iconHeight {
-    background-image: url('../SVG/height.svg');
+    mask-image: url('../SVG/height.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }
 .iconWeight {
-    background-image: url('../SVG/weight.svg');
+    mask-image: url('../SVG/weight.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }
 .iconNext {
-    background-image: url('../SVG/next.svg');
+    mask-image: url('../SVG/next.svg');
+    background-color: var(--default-icon-color);
     min-height: 35px;
     min-width: 35px;
     height: 35px;
     width: 35px;
 }
 .iconStats{
-    background-image: url('../SVG/stats.svg');
+    mask-image: url('../SVG/stats.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }
 .iconGoal {
-    background-image: url('../SVG/goal.svg');
+    mask-image: url('../SVG/goal.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }
 .iconPlus {
-    background-image: url('../SVG/plus.svg');
+    mask-image: url('../SVG/plus.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }
 .iconI {
-    background-image: url('../SVG/i.svg');
+    mask-image: url('../SVG/i.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }
 .iconSneaker {
-    background-image: url('../SVG/sneaker.svg');
+    mask-image: url('../SVG/sneaker.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }
 .iconWarning {
-    background-image: url('../SVG/warning.svg');
+    mask-image: url('../SVG/warning.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }
 .iconEye {
-    background-image: url('../SVG/eye.svg');
+    mask-image: url('../SVG/eye.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }
 .iconCross {
-    background-image: url('../SVG/cross.svg');
+    mask-image: url('../SVG/cross.svg');
+    background-color: var(--default-icon-color);
+    height: 35px;
+    width: 35px;
+}
+.iconMolotok {
+    mask-image: url('../SVG/molotok.svg');
+    background-color: var(--default-icon-color);
+    height: 35px;
+    width: 35px;
+}
+.iconKey {
+    mask-image: url('../SVG/key.svg');
+    background-color: var(--default-icon-color);
     height: 35px;
     width: 35px;
 }

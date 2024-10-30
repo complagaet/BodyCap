@@ -1,9 +1,29 @@
+:root {
+    --default-text-color: #1a1a1a;
+    --default-icon-color: #000000;
+    --default-iconContainer-color: #f9f8ff;
+    --default-btn-color: #f9f8ff;
+    --body-color: #f9f8ff;
+    --tile-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --default-text-color: #ffffff;
+        --default-icon-color: #ffffff;
+        --default-iconContainer-color: #3a3939;
+        --default-btn-color: #3a3939;
+        --body-color: #191919;
+        --tile-color: #2a2a2a;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto-Regular", "Arial", sans-serif;
-    color: #1a1a1a
+    color: var(--default-text-color)
 }
 @font-face {
     font-family: "Roboto-Regular";
@@ -26,7 +46,13 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    background-color: #f9f8ff;
+    transition: 0.2s;
+    background-color: var(--body-color);
+}
+.passwordWindow {
+    background-color: #1a1a1a;
+    border-radius: 15px !important;
+    position: absolute;
 }
 header {
     width: calc(100% - 40px);
@@ -37,7 +63,7 @@ header {
     display: flex;
     position: fixed;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 20px;
     top: 20px;
@@ -45,6 +71,9 @@ header {
     background-color: #ffffff36;
     backdrop-filter: blur(15px);
     transition-duration: 1s;
+}
+.initiallyHidden {
+    visibility: hidden;
 }
 .headerFullscreen {
     width: 100%;
@@ -54,8 +83,9 @@ header {
     max-width: 100%;
 }
 #navHeader {
+    width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     gap: 10px
 }
 section {
@@ -64,7 +94,7 @@ section {
     flex-direction: column;
     gap: 10px;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--tile-color);
     border-radius: 25px;
     flex-grow: 1;
 
@@ -122,6 +152,7 @@ section {
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    color: var(--default-text-color);
 }
 h1 {
     font-family: "Roboto-Bold", "Arial", sans-serif;
@@ -161,7 +192,7 @@ h3 {
     height: 50px;
     transition-duration: 0.4s;
     border-radius: 15px;
-    color: #000000;
+    color: var(--default-text-color);;
 }
 .btnFrame:hover {
     background-color: #37373799;
@@ -172,12 +203,10 @@ a, p, label {
     margin: 0;
     font-weight: normal;
     line-height: normal;
+    color: var(--default-text-color);
 }
 p, label {
-    color: black;
-}
-label {
-    color: white;
+    color: var(--default-text-color);
 }
 main {
     display: flex;
@@ -196,7 +225,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: #ffffff;
+    background-color: var(--tile-color);
 }
 ul {
     list-style-type: none;
@@ -209,10 +238,15 @@ input, button, textarea, select, .button {
     min-height: 50px;
     width: 100%;
     border-radius: 15px;
-    padding: 7px;
+    padding: 0 12px 0 12px;
     font-size: 20px;
     border: none;
-    background-color: #f9f8ff;
+    background-color: var(--default-btn-color);
+}
+.miniButtonWithIcon {
+    width: fit-content;
+    padding: 0 12px 0 5px !important;
+    gap: 0 !important;
 }
 button, .button {
     display: flex;
@@ -242,22 +276,22 @@ button:hover {
 .colorsSwimming {
     background-color: #b2c9fd;
     color: #002c9f;
-    background-image: url("../SVG/blueBG.svg");
+    background-image: url("../IMG/blueBG.webp");
 }
 .colorsRunning {
     background-color: #fde5b2;
     color: #810000;
-    background-image: url("../SVG/redBG.svg");
+    background-image: url("../IMG/redBG.webp");
 }
 .colorsBicycling {
     background-color: #b2fdf7;
     color: #005035;
-    background-image: url("../SVG/greenBG.svg");
+    background-image: url("../IMG/greenBG.webp");
 }
 .colorsClimbing {
     background-color: #f3dbc8;
     color: #2e2419;
-    background-image: url("../SVG/brownBG.svg");
+    background-image: url("../IMG/brownBG.webp");
 }
 .colorsTracker {
     color: #ffffff;
@@ -289,7 +323,21 @@ form {
 }
 .mistake {
     background-color: #ff4545;
+    color: #ffffff;
 }
+.mistake::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+.accepted {
+    background-color: #00e600;
+    color: #ffffff;
+}
+.accepted::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+/*
 .accordion {
     background-color: #eee;
     color: #444;
@@ -311,7 +359,7 @@ form {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-
+*/
 .feedback-box {
     display: none;
     position: fixed;

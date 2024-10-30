@@ -15,24 +15,24 @@ let basicsEdit = () => {
     let btn = document.getElementById("buttonBasics")
     let basicsWindow = new smoothModal("basicsButton", btn);
 
-    basicsWindow.modalWindowCSS = `background-color: white; border-radius: 25px; width: 400px; height: 322px; padding: 20px;`
+    basicsWindow.modalWindowCSS = `background-color: var(--tile-color); border-radius: 25px; width: 400px; height: 322px; padding: 20px;`
     basicsWindow.collapsedElementCloneCSS = `display: flex; align-items: center; justify-content: center; border-radius: 15px; top: 0; left: 0; transition-duration: 0.4s`
     basicsWindow.collapsedElementCloneCSSSegueAddition = `border-radius: 25px`
     basicsWindow.expandingTime = 0.4
     basicsWindow.collapsingTime = 0.4
-    basicsWindow.collapsedElementHidingTimeout = -0.1
+    basicsWindow.collapsedElementCloneHidingTimeout = -0.1
     basicsWindow.BtCM = 1
 
     btn.onclick = () => {
         basicsWindow.modalWindowContent = `
-            <div class="flex-column" style="gap: 10px">
+            <div class="flex-column" style="gap: 10px;" id="basicsWindow">
                 <div class="flex-justifyspacebetween" style="gap: 10px; width: 100%">
                     <h3>Weight &amp; Height</h3>
                     <svg id="close" class="iconCross clickable"></svg>
                 </div>
     
                 <div class="flex" style="gap: 10px">
-                    <div class="iconContainer" style="background-color: #f9f8ff">
+                    <div class="iconContainer">
                         <svg class="iconWeight"></svg>
                     </div>
                     <div class="flex-column" style="gap: 10px; width: 100%">
@@ -45,7 +45,7 @@ let basicsEdit = () => {
                 </div>
                 
                 <div class="flex" style="gap: 10px">
-                    <div class="iconContainer" style="background-color: #f9f8ff">
+                    <div class="iconContainer">
                         <svg class="iconHeight"></svg>
                     </div>
                     <div class="flex-column" style="gap: 10px; width: 100%">
@@ -88,7 +88,10 @@ let basicsEdit = () => {
                         data[i][1] = currentDate;
                         pass *= true
                     } else {
-                        input.classList.add("mistake");
+                        input.classList.add("mistake", "shake");
+                        setTimeout(() => {
+                            input.classList.remove("shake")
+                        }, 300)
                         pass *= false
                     }
                 }
@@ -160,20 +163,7 @@ let updateWeightChart = () => {
     charts.weight.update();
 }
 
-window.addEventListener("load", () => {
-    charts = {
-        weight: new Chart(document.getElementById('chartWeight'), {
-            type: "line",
-            options: {
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        })
-    }
-
+let launch = () => {
     let sections = document.getElementsByTagName("section")
     window.scrollTo(0, 0)
     for (let i = 0; i < sections.length; i++) {
@@ -192,4 +182,97 @@ window.addEventListener("load", () => {
     updateDashboard()
     basicsEdit()
     updateWeightChart()
+
+    HeaderAndTools.headerUpdate()
+    HeaderAndTools.settings()
+
+    window.addEventListener('resize', () => {
+        HeaderAndTools.headerUpdate()
+    })
+}
+
+window.addEventListener("load", () => {
+    charts = {
+        weight: new Chart(document.getElementById('chartWeight'), {
+            type: "line",
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        })
+    }
+
+    window.scrollTo(0, 0)
+    HeaderAndTools.theme(User.basics.theme)
+
+    if (User.basics.pwd) {
+        let passwordWindow = new smoothModal("passwordWindow", document.getElementById('passwordWindow'))
+
+        passwordWindow.modalWindowCSS = `background-color: var(--tile-color); border-radius: 25px; width: 400px; height: 160px; padding: 20px;`
+        passwordWindow.collapsedElementCloneCSS = `display: flex; align-items: center; justify-content: center; border-radius: 15px; top: 0; left: 0; transition-duration: 0.4s`
+        passwordWindow.collapsedElementCloneCSSSegueAddition = `border-radius: 25px !important`
+        passwordWindow.expandingTime = 0.4
+        passwordWindow.collapsingTime = 0.4
+        passwordWindow.collapsedElementCloneHidingTimeout = 0.7
+        passwordWindow.BtCM = 1
+        passwordWindow.escCollapse = false
+
+        passwordWindow.modalWindowContent = `
+            <div class="flex-column" style="gap: 10px;" id="basicsWindow">
+                <div class="flex-justifyspacebetween" style="gap: 10px; width: 100%">
+                    <h3>Tracker is locked!</h3>
+                </div>
+                
+                <div class="flex" style="gap: 10px">
+                    <div class="iconContainer">
+                        <svg class="iconKey"></svg>
+                    </div>
+                    <div class="flex-column" style="gap: 10px; width: 100%">
+                        <p>Enter password</p>
+                        <div class="flex" style="gap: 10px; width: 100%">
+                            <input type="password" id="password" name="password" required="" placeholder="Password...">
+                            <button style="max-width: 95px" id="login">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
+
+        passwordWindow.expand()
+
+        let attemptOnEnter = (ev) => {
+            if (ev.key === "Enter") {
+                attemptLogin()
+            }
+        }
+
+        let attemptLogin = () => {
+            let password = document.getElementById('password')
+
+            if (User.basics.pwd === password.value) {
+                document.removeEventListener("keydown", attemptOnEnter)
+                passwordWindow.collapse()
+                launch()
+            } else {
+                password.classList.add("mistake");
+                let windowFrame = document.getElementById('BobatronModal_passwordWindow').children[0]
+                windowFrame.classList.add("shake")
+                setTimeout(() => {
+                    windowFrame.classList.remove("shake")
+                }, 300)
+            }
+        }
+
+        setTimeout(() => {
+            document.addEventListener("keydown", attemptOnEnter)
+
+            document.getElementById('login').onclick = () => {
+                attemptLogin()
+            }
+
+        }, passwordWindow.expandingTime * 1000)
+    } else { launch() }
 })

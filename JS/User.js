@@ -1,6 +1,8 @@
 let User= {
     basics: {
         name: "",
+        pwd: "",
+        theme: "",
         weight: [],
         height: []
     },
