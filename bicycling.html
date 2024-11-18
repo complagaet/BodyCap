@@ -3,11 +3,28 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="JS/Bobatron.js"></script>
+        <script src="JS/BobatronDynamic.js"></script>
+        <script src="JS/Storage.js"></script>
+        <script src="JS/HeaderAndTools.js"></script>
+        <script src="JS/User.js"></script>
+        <script src="JS/running.js"></script>
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
         <link href="CSS/icons.css" rel="stylesheet" type="text/css">
         <link href="CSS/LazyLukPack.css" rel="stylesheet" type="text/css">
         <meta charset="UTF-8">
         <title>Bicycling Benefits - BodyCap</title>
+
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                HeaderAndTools.headerUpdate()
+                HeaderAndTools.sports()
+
+                window.addEventListener('resize', () => {
+                    HeaderAndTools.headerUpdate()
+                })
+            })
+        </script>
     </head>
     <body>
         <header>
@@ -15,12 +32,15 @@
                 <a href="index.html" style="color: #000000; text-decoration: none">
                     <h1 style="font-size: 40px; margin: 0 10px" class="clickable">BodyCap</h1>
                 </a>
-                <a href="swimming.html" class="btnFrame">Swimming</a>
-                <a href="running.html" class="btnFrame">Running</a>
-                <a href="bicycling.html" class="btnFrame">Bicycling</a>
-                <a href="climbing.html" class="btnFrame">Climbing</a>
-                <a href="tracker.html" class="btnFrame">Tracker</a>
-                <button id="headerSettings" class="button miniButtonWithIcon"><svg class="iconMolotok"></svg>Settings</button>
+                <a href="running.html" class="initiallyHidden btnFrame wideScreen">Running</a>
+                <a href="swimming.html" class="initiallyHidden btnFrame wideScreen">Swimming</a>
+                <a href="bicycling.html" class="initiallyHidden btnFrame wideScreen">Bicycling</a>
+                <a href="climbing.html" class="initiallyHidden btnFrame wideScreen">Climbing</a>
+                <!--a href="tracker.html" class="initiallyHidden btnFrame wideScreen">Tracker</a-->
+                <div class="flex" style="gap: 10px; width: fit-content">
+                    <a href="tracker.html" class="btnFrame initiallyHidden">Tracker</a>
+                    <button id="headerMenu" class="button" style="display: none">Menu</button>
+                </div>
             </nav>
         </header>
 
