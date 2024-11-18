@@ -79,7 +79,7 @@
                     </div>
                 </div>
                 <div class="flex-aligncenter flex-justifycenter" style="gap: 20px">
-                    <div class="pie animate" style="--p: 0; --c: #ffdada"><h1>0</h1></div>
+                    <div id="dashboardStepsChart" class="pie animate" style="--p: 0; --c: #ffdada"><h1>0</h1></div>
                     <div class="flex-column" style="gap: 10px">
                         <h3>Steps</h3>
                         <div class="flex" style="gap: 10px">
@@ -88,7 +88,7 @@
                             </div>
                             <div>
                                 <h3>Goal</h3>
-                                <p>0 st.</p>
+                                <p id="dashboardGoal">0</p>
                             </div>
                         </div>
                         <div class="flex" style="gap: 10px">
@@ -97,7 +97,7 @@
                             </div>
                             <div>
                                 <h3>Move</h3>
-                                <p>0 kcal</p>
+                                <p id="dashboardSteps">0</p>
                             </div>
                         </div>
                     </div>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="flex-column" style="gap: 10px; width: 100%">
                         <p>Add information about your steps today. This information will be used to calculate calories burned.</p>
-                        <button class="button" id="buttonSteps">Add steps<svg class="iconPlus"></svg></button>
+                        <button class="button" id="buttonStepsGoal">Steps &amp; Goal</button>
                     </div>
                 </div>
                 <div class="flex" style="gap: 10px">
@@ -133,7 +133,6 @@
                     </div>
                     <div class="flex-column" style="gap: 10px; width: 100%">
                         <p>Set a goal for steps per day. This will help you monitor your progress and keep up with the pace.</p>
-                        <button class="button">Set goal<svg class="iconPlus"></svg></button>
                     </div>
                 </div>
             </section>
@@ -153,10 +152,10 @@
                 <canvas id="chartWeight" style="height: 100%"></canvas>
             </section>
 
-            <section class="bobatron">
+            <!--section class="bobatron">
                 <h3>Exercise Chart</h3>
                 <div class="chartWrapper"></div>
-            </section>
+            </section-->
 
             <!--section>
                 <button class="accordion">Section 1</button>
