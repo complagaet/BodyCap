@@ -7,12 +7,24 @@
         <script src="JS/BobatronDynamic.js"></script>
         <script src="JS/Storage.js"></script>
         <script src="JS/User.js"></script>
+        <script src="JS/HeaderAndTools.js"></script>
         <script src="JS/swimming.js"></script>
         <link href="CSS/main.css" rel="stylesheet" type="text/css">
         <link href="CSS/icons.css" rel="stylesheet" type="text/css">
         <link href="CSS/LazyLukPack.css" rel="stylesheet" type="text/css">
         <meta charset="UTF-8">
         <title>BodyCap</title>
+
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                HeaderAndTools.headerUpdate()
+                HeaderAndTools.sports()
+
+                window.addEventListener('resize', () => {
+                    HeaderAndTools.headerUpdate()
+                })
+            })
+        </script>
     </head>
     <body>
         <header>
@@ -20,12 +32,14 @@
                 <a href="index.html" style="color: #000000; text-decoration: none">
                     <h1 style="font-size: 40px; margin: 0 10px" class="clickable">BodyCap</h1>
                 </a>
-                <a href="swimming.html" class="btnFrame">Swimming</a>
-                <a href="running.html" class="btnFrame">Running</a>
-                <a href="bicycling.html" class="btnFrame">Bicycling</a>
-                <a href="climbing.html" class="btnFrame">Climbing</a>
-                <a href="tracker.html" class="btnFrame">Tracker</a>
-                <button id="headerSettings" class="button miniButtonWithIcon"><svg class="iconMolotok"></svg>Settings</button>
+                <a href="running.html" class="initiallyHidden btnFrame wideScreen">Running</a>
+                <a href="bicycling.html" class="initiallyHidden btnFrame wideScreen">Bicycling</a>
+                <a href="climbing.html" class="initiallyHidden btnFrame wideScreen">Climbing</a>
+                <!--a href="tracker.html" class="initiallyHidden btnFrame wideScreen">Tracker</a-->
+                <div class="flex" style="gap: 10px; width: fit-content">
+                    <a href="tracker.html" class="btnFrame initiallyHidden">Tracker</a>
+                    <button id="headerMenu" class="button" style="display: none">Menu</button>
+                </div>
             </nav>
         </header>
 
@@ -39,7 +53,7 @@
                 <img src="IMG/swimming/swimming-1.png" alt="Swimming" style="object-fit: cover; height: 300px">
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
-                        <svg class="iconI"></svg>
+                        <svg class="iconI" style="background-color: black"></svg>
                     </div>
                     <p>Swimming is a full-body workout that improves cardiovascular health, strengthens muscles, and enhances flexibility. It’s low-impact, making it ideal for joint health and injury recovery. Swimming also reduces stress, boosts mental well-being and promotes overall fitness.</p>
                 </div>
@@ -50,37 +64,37 @@
 
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
-                        <h1>1</h1>
+                        <h1 style="color: black">1</h1>
                     </div>
                     <p>Enhances heart and lung health, boosting cardiovascular endurance with each stroke.</p>
                 </div>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
-                        <h1>2</h1>
+                        <h1 style="color: black">2</h1>
                     </div>
                     <p>Full-body toning that works muscles you didn't even know you had—legs, arms, core, and back are all engaged.</p>
                 </div>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
-                        <h1>3</h1>
+                        <h1 style="color: black">3</h1>
                     </div>
                     <p>Increases flexibility and balance, promoting smooth, controlled movements in and out of the water.</p>
                 </div>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
-                        <h1>4</h1>
+                        <h1 style="color: black">4</h1>
                     </div>
                     <p>Relieves stress and calms the mind, offering a form of 'active meditation' as you glide through water.</p>
                 </div>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
-                        <h1>5</h1>
+                        <h1 style="color: black">5</h1>
                     </div>
                     <p>Gentle on the joints, making it an excellent choice for those with arthritis or recovering from injuries.</p>
                 </div>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
-                        <h1>6</h1>
+                        <h1 style="color: black">6</h1>
                     </div>
                     <p>Burns calories efficiently—perfect for weight management while enjoying a refreshing dip.</p>
                 </div>
@@ -126,7 +140,7 @@
                 </div>
                 <div class="flex flex-aligncenter" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
-                        <svg class="iconEye"></svg>
+                        <svg class="iconEye" style="background-color: black"></svg>
                     </div>
                     <a href="https://www.swim-teach.com/types-of-swimming-strokes.html">Source: swim-teach.com</a>
                 </div>
@@ -136,7 +150,7 @@
                 <h1>Why Swimming Stands Out</h1>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #f9f8ff">
-                        <svg class="iconI"></svg>
+                        <svg class="iconI" style="background-color: black"></svg>
                     </div>
                     <p>Unlike other forms of exercise, swimming uses water's resistance to tone your muscles while protecting your body from high-impact stress. It's a blend of fun and fitness, making every swim session feel like an escape from the ordinary.</p>
                 </div>
@@ -151,19 +165,19 @@
 
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #fcecc7">
-                        <h1>1</h1>
+                        <h1 style="color: black">1</h1>
                     </div>
                     <p><b>Start with floating:</b> Build comfort in the water by learning to float on your back and control your breathing. This foundational skill leads to smoother swimming.</p>
                 </div>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #fcecc7">
-                        <h1>2</h1>
+                        <h1 style="color: black">2</h1>
                     </div>
                     <p><b>Master basic strokes:</b> Learn the fundamental strokes — freestyle, backstroke, breaststroke, and butterfly. Each stroke targets different muscles and offers varying intensity levels.</p>
                 </div>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #fcecc7">
-                        <h1>3</h1>
+                        <h1 style="color: black">3</h1>
                     </div>
                     <p><b>Stay safe:</b> Always swim in designated areas with lifeguards present. Know your limits and never swim alone in open waters.</p>
                 </div>
@@ -175,19 +189,19 @@
 
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #e0f7e3">
-                        <h1>1</h1>
+                        <h1 style="color: black">1</h1>
                     </div>
                     <p><b>Open Water Swimming:</b> Experience the thrill of swimming in natural bodies of water, such as oceans, lakes, or rivers. It offers a completely different experience compared to pool swimming and brings you closer to nature.</p>
                 </div>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #e0f7e3">
-                        <h1>2</h1>
+                        <h1 style="color: black">2</h1>
                     </div>
                     <p><b>Competitive Swimming:</b> Join a local swim team or participate in races to push your limits. Competing adds focus to your training and keeps you motivated.</p>
                 </div>
                 <div class="flex" style="gap: 10px">
                     <div class="iconContainer" style="background-color: #e0f7e3">
-                        <h1>3</h1>
+                        <h1 style="color: black">3</h1>
                     </div>
                     <p><b>Aquatic Therapy:</b> Use the therapeutic properties of water to recover from injury, manage chronic pain, or simply relax tired muscles.</p>
                 </div>

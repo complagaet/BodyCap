@@ -36,12 +36,15 @@
                 <a href="index.html" style="color: #000000; text-decoration: none">
                     <h1 style="font-size: 40px; margin: 0 10px" class="clickable">BodyCap</h1>
                 </a>
-                <a href="swimming.html" class="btnFrame">Swimming</a>
-                <a href="running.html" class="btnFrame">Running</a>
-                <a href="bicycling.html" class="btnFrame">Bicycling</a>
-                <a href="climbing.html" class="btnFrame">Climbing</a>
-                <a href="tracker.html" class="btnFrame">Tracker</a>
-                <button id="headerSettings" class="button miniButtonWithIcon initiallyHidden"><svg class="iconMolotok"></svg>Settings</button>
+                <a href="swimming.html" class="initiallyHidden btnFrame wideScreen">Swimming</a>
+                <a href="running.html" class="initiallyHidden btnFrame wideScreen">Running</a>
+                <a href="bicycling.html" class="initiallyHidden btnFrame wideScreen">Bicycling</a>
+                <a href="climbing.html" class="initiallyHidden btnFrame wideScreen">Climbing</a>
+                <!--a href="tracker.html" class="initiallyHidden btnFrame wideScreen">Tracker</a-->
+                <div class="flex" style="gap: 10px; width: fit-content">
+                    <button id="headerMenu" class="button initiallyHidden" style="display: none">Menu</button>
+                    <button id="headerSettings" class="button miniButtonWithIcon initiallyHidden"><svg class="iconMolotok"></svg>Settings</button>
+                </div>
             </nav>
         </header>
 
@@ -76,7 +79,7 @@
                     </div>
                 </div>
                 <div class="flex-aligncenter flex-justifycenter" style="gap: 20px">
-                    <div class="pie animate" style="--p: 48; --c: #ffdada"><h1 >7032</h1></div>
+                    <div class="pie animate" style="--p: 0; --c: #ffdada"><h1>0</h1></div>
                     <div class="flex-column" style="gap: 10px">
                         <h3>Steps</h3>
                         <div class="flex" style="gap: 10px">
@@ -85,7 +88,7 @@
                             </div>
                             <div>
                                 <h3>Goal</h3>
-                                <p>&mdash; st.</p>
+                                <p>0 st.</p>
                             </div>
                         </div>
                         <div class="flex" style="gap: 10px">
@@ -94,7 +97,7 @@
                             </div>
                             <div>
                                 <h3>Move</h3>
-                                <p>&mdash; kcal</p>
+                                <p>0 kcal</p>
                             </div>
                         </div>
                     </div>
@@ -138,10 +141,10 @@
             <section style="width: 100%" class="bobatron">
                 <h3>Exercises</h3>
                 <div class="flex" style="gap: 20px; width: 100%; flex-wrap: wrap">
-                    <button class="buttonExercise colorsSwimming clickable bobatron" Bt-CM="0.7" id="buttonSwimming">Swimming</button>
-                    <button class="buttonExercise colorsRunning clickable bobatron" Bt-CM="0.7" id="buttonRunning">Running</button>
-                    <button class="buttonExercise colorsBicycling clickable bobatron" Bt-CM="0.7" id="buttonBicycling">Bicycling</button>
-                    <button class="buttonExercise colorsClimbing clickable bobatron" Bt-CM="0.7" id="buttonClimbing">Climbing</button>
+                    <button class="buttonExercise colorsSwimming clickable bobatron" Bt-CM="0.7" id="buttonSwimming" onclick="window.location.href = './swimming.html'">Swimming</button>
+                    <button class="buttonExercise colorsRunning clickable bobatron" Bt-CM="0.7" id="buttonRunning" onclick="window.location.href = './running.html'">Running</button>
+                    <button class="buttonExercise colorsBicycling clickable bobatron" Bt-CM="0.7" id="buttonBicycling" onclick="window.location.href = './bicycling.html'">Bicycling</button>
+                    <button class="buttonExercise colorsClimbing clickable bobatron" Bt-CM="0.7" id="buttonClimbing" onclick="window.location.href = './climbing.html'">Climbing</button>
                 </div>
             </section>
 

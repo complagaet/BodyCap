@@ -391,3 +391,8 @@ form {
     border-radius: 5px;
     cursor: pointer;
 }
+.square-button {
+    padding: 0;
+    min-height: 50px;
+    min-width: 50px;
+}

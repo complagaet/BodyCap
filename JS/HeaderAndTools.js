@@ -3,11 +3,30 @@ let HeaderAndTools = {
     current: "",
     shortHeader: () => {
         console.log("short")
+
+        try {
+            document.getElementById("headerSettings").innerHTML = `<svg class="iconMolotok"></svg>`
+            document.getElementById("headerSettings").classList.add("square-button")
+            document.getElementById("headerSettings").classList.remove("miniButtonWithIcon")
+        } catch (e) { }
+
+        document.getElementById("headerMenu").style.display = "flex"
+
+        for (let i of Array.from(document.getElementsByClassName("wideScreen"))) {
+            i.style.display = "none"
+        }
     },
     longHeader: () => {
         console.log("long")
-        for (let i of document.getElementsByClassName("initiallyHidden")) {
-            i.classList.remove("initiallyHidden")
+        try {
+            document.getElementById("headerSettings").innerHTML = `<svg class="iconMolotok"></svg>Settings`
+            document.getElementById("headerSettings").classList.remove("square-button")
+            document.getElementById("headerSettings").classList.add("miniButtonWithIcon")
+        } catch (e) { }
+        document.getElementById("headerMenu").style.display = "none"
+
+        for (let i of Array.from(document.getElementsByClassName("wideScreen"))) {
+            i.style.display = "flex"
         }
     },
     headerUpdate: () => {
@@ -15,7 +34,7 @@ let HeaderAndTools = {
         let transitionDuration = HeaderAndTools.transitionDuration
         let current = ""
 
-        if (document.body.offsetWidth <= 960) {
+        if (document.body.offsetWidth <= 1050) {
             current = "shortHeader"
         } else {
             current = "longHeader"
@@ -24,10 +43,16 @@ let HeaderAndTools = {
         header.children[0].style.transitionDuration = `${transitionDuration}s`
         if (current !== HeaderAndTools.current) {
             header.children[0].style.scale = "0.7"
+            header.children[0].style.opacity = "0"
             setTimeout(() => {
                 HeaderAndTools[current]()
                 HeaderAndTools.current = current
                 header.children[0].style.scale = "1"
+                header.children[0].style.opacity = "1"
+
+                for (let i of Array.from(document.getElementsByClassName("initiallyHidden"))) {
+                    i.classList.remove("initiallyHidden")
+                }
             }, transitionDuration * 1000)
         }
     },
@@ -66,6 +91,51 @@ let HeaderAndTools = {
     },
     password: () => {
 
+    },
+    sports: () => {
+        let btn = document.getElementById('headerMenu');
+        let modal = new smoothModal("headerMenu", btn);
+
+        modal.modalWindowCSS = `background-color: var(--tile-color); border-radius: 25px; width: 400px; height: 395px; padding: 20px;`
+        modal.collapsedElementCloneCSS = `display: flex; align-items: center; justify-content: center; border-radius: 15px; top: 0; left: 0; transition-duration: 0.4s`
+        modal.collapsedElementCloneCSSSegueAddition = `border-radius: 25px`
+        modal.expandingTime = 0.4
+        modal.collapsingTime = 0.4
+        modal.collapsedElementCloneHidingTimeout = -0.1
+        modal.BtCM = 1
+
+        btn.onclick = () => {
+            modal.modalWindowContent = `
+            <div class="flex-column" style="gap: 10px">
+                <div class="flex-justifyspacebetween" style="gap: 10px; width: 100%">
+                    <h3>Menu</h3>
+                    <svg id="close" class="iconCross clickable"></svg>
+                </div>
+                
+                <a href="swimming.html">
+                    <button class="buttonExercise colorsSwimming clickable bobatron" Bt-CM="0.7" id="buttonSwimming" style="width: 100%; height: 70px">Swimming</button>
+                </a>
+                <a href="running.html">
+                    <button class="buttonExercise colorsRunning clickable bobatron" Bt-CM="0.7" id="buttonRunning" style="width: 100%; height: 70px">Running</button>
+                </a>
+                <a href="bicycling.html">
+                    <button class="buttonExercise colorsBicycling clickable bobatron" Bt-CM="0.7" id="buttonBicycling" style="width: 100%; height: 70px">Bicycling</button>
+                </a>
+                <a href="climbing.html">
+                    <button class="buttonExercise colorsClimbing clickable bobatron" Bt-CM="0.7" id="buttonClimbing" style="width: 100%; height: 70px">Climbing</button>
+                </a>
+            </div>`
+
+            modal.expand()
+
+            setTimeout(() => {
+                bobatron.scanner()
+
+                document.getElementById("close").onclick = () => {
+                    modal.collapse()
+                }
+            }, modal.expandingTime * 1000 + 300)
+        }
     },
     settings: () => {
         let btn = document.getElementById('headerSettings');

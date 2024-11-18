@@ -185,13 +185,14 @@ let launch = () => {
 
     HeaderAndTools.headerUpdate()
     HeaderAndTools.settings()
+    HeaderAndTools.sports()
 
     window.addEventListener('resize', () => {
         HeaderAndTools.headerUpdate()
     })
 }
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
     charts = {
         weight: new Chart(document.getElementById('chartWeight'), {
             type: "line",
