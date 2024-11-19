@@ -1,10 +1,16 @@
+let sounds = {
+    click: new Audio('../WAV/mixkit-click.wav'),
+    error: new Audio('../WAV/mixkit-error.wav'),
+}
+
 document.addEventListener('DOMContentLoaded', function() {     
     const progressButton = document.getElementById('progressButton');     
     const feedbackMessage = document.getElementById('feedbackMessage');     
     const feedbackBox = document.getElementById('feedbackBox');     
     const closeFeedback = document.getElementById('closeFeedback');          
 
-    progressButton.addEventListener('click', function() {         
+    progressButton.addEventListener('click', function() { 
+        sounds.click.play();        
         const ageSelect = document.querySelector('select');         
         const metersSwamInput = document.getElementById('metersSwamInput');         
         const selectedAge = ageSelect.value;         
@@ -48,13 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }          
 
         if (metersSwam < minMeters) {
-            feedbackBox.style.backgroundColor = 'red';  
+            feedbackBox.style.backgroundColor = 'white';  
             message = `Keep trying! You swam ${metersSwam} meters, but you need to swim at least ${minMeters} meters.`;
         } else if (metersSwam >= minMeters && metersSwam <= maxMeters) {
-            feedbackBox.style.backgroundColor = 'gold';  
+            feedbackBox.style.backgroundColor = 'white';  
             message = `Great job! You swam ${metersSwam} meters, which is within your recommended range of ${minMeters}-${maxMeters} meters.`;
         } else {
-            feedbackBox.style.backgroundColor = 'green';  
+            feedbackBox.style.backgroundColor = 'white';  
             message = `Awesome! You swam ${metersSwam} meters, which is more than the recommended ${maxMeters} meters. Keep up the great work!`;
         }
 
