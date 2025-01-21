@@ -1,6 +1,6 @@
 # BodyCap - Interactive Sports Tracker
 
-![App Screenshot](https://i.imgur.com/4Uk8qOx.png)
+![App Screenshot](https://raw.githubusercontent.com/complagaet/BodyCap/refs/heads/main/images/1.png)
 
 **BodyCap** is an interactive sports tracking website designed to help users monitor their fitness activities, track progress, and access helpful resources for various sports such as running, swimming, climbing, and bicycling.
 
